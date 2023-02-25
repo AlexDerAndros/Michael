@@ -1,0 +1,73 @@
+[debug] [2023-02-25T17:17:38.387Z] ----------------------------------------------------------------------
+[debug] [2023-02-25T17:17:38.389Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ntrik\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-02-25T17:17:38.389Z] CLI Version:   11.24.0
+[debug] [2023-02-25T17:17:38.389Z] Platform:      win32
+[debug] [2023-02-25T17:17:38.389Z] Node Version:  v19.7.0
+[debug] [2023-02-25T17:17:38.390Z] Time:          Sat Feb 25 2023 18:17:38 GMT+0100 (Mitteleuropäische Normalzeit)
+[debug] [2023-02-25T17:17:38.390Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-02-25T17:17:38.434Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-02-25T17:17:38.434Z] > authorizing via signed-in user (alexandros.ntrikos@ohg-monheim.eu)
+[debug] [2023-02-25T17:17:38.434Z] [iam] checking project michael--artist for permissions ["cloudconfig.configs.get","cloudconfig.configs.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2023-02-25T17:17:38.435Z] > refreshing access token with scopes: []
+[debug] [2023-02-25T17:17:38.437Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-02-25T17:17:38.437Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-02-25T17:17:38.634Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-02-25T17:17:38.634Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-02-25T17:17:38.657Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/michael--artist:testIamPermissions [none]
+[debug] [2023-02-25T17:17:38.657Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/michael--artist:testIamPermissions x-goog-quota-user=projects/michael--artist
+[debug] [2023-02-25T17:17:38.657Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/michael--artist:testIamPermissions {"permissions":["cloudconfig.configs.get","cloudconfig.configs.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2023-02-25T17:17:40.300Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/michael--artist:testIamPermissions 200
+[debug] [2023-02-25T17:17:40.300Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/michael--artist:testIamPermissions {"permissions":["cloudconfig.configs.get","cloudconfig.configs.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]}
+[debug] [2023-02-25T17:17:40.301Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/michael--artist [none]
+[debug] [2023-02-25T17:17:40.686Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/michael--artist 200
+[debug] [2023-02-25T17:17:40.686Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/michael--artist {"projectId":"michael--artist","projectNumber":"690442290094","displayName":"Michael","name":"projects/michael--artist","resources":{"hostingSite":"michael--artist","realtimeDatabaseInstance":"michael--artist-default-rtdb"},"state":"ACTIVE","etag":"1_287b5164-1cfc-4b77-bb2d-904943edd2d4"}
+[debug] [2023-02-25T17:17:40.688Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/michael--artist [none]
+[debug] [2023-02-25T17:17:40.893Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/michael--artist 200
+[debug] [2023-02-25T17:17:40.893Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/michael--artist {"projectId":"michael--artist","projectNumber":"690442290094","displayName":"Michael","name":"projects/michael--artist","resources":{"hostingSite":"michael--artist","realtimeDatabaseInstance":"michael--artist-default-rtdb"},"state":"ACTIVE","etag":"1_287b5164-1cfc-4b77-bb2d-904943edd2d4"}
+[info] 
+[info] === Deploying to 'michael--artist'...
+[info] 
+[info] i  deploying database, hosting, remoteconfig 
+[info] i  database: checking rules syntax... 
+[debug] [2023-02-25T17:17:40.899Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/michael--artist/locations/-/instances/michael--artist-default-rtdb [none]
+[debug] [2023-02-25T17:17:41.433Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/michael--artist/locations/-/instances/michael--artist-default-rtdb 200
+[debug] [2023-02-25T17:17:41.433Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/michael--artist/locations/-/instances/michael--artist-default-rtdb {"name":"projects/690442290094/locations/europe-west1/instances/michael--artist-default-rtdb","project":"projects/690442290094","databaseUrl":"https://michael--artist-default-rtdb.europe-west1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[debug] [2023-02-25T17:17:41.435Z] >>> [apiv2][query] PUT https://michael--artist-default-rtdb.europe-west1.firebasedatabase.app/.settings/rules.json dryRun=true
+[debug] [2023-02-25T17:17:41.435Z] >>> [apiv2][body] PUT https://michael--artist-default-rtdb.europe-west1.firebasedatabase.app/.settings/rules.json "{\n  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */\n  \"rules\": {\n    \".read\": false,\n    \".write\": false\n  }\n}"
+[debug] [2023-02-25T17:17:41.593Z] <<< [apiv2][status] PUT https://michael--artist-default-rtdb.europe-west1.firebasedatabase.app/.settings/rules.json 200
+[debug] [2023-02-25T17:17:41.593Z] <<< [apiv2][body] PUT https://michael--artist-default-rtdb.europe-west1.firebasedatabase.app/.settings/rules.json {"status":"ok"}
+[info] +  database: rules syntax for database michael--artist-default-rtdb is valid 
+[debug] [2023-02-25T17:17:41.598Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/michael--artist/versions [none]
+[debug] [2023-02-25T17:17:41.598Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/michael--artist/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-02-25T17:17:42.748Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/michael--artist/versions 200
+[debug] [2023-02-25T17:17:42.748Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/michael--artist/versions {"name":"projects/690442290094/sites/michael--artist/versions/335984e9d5c51e9c","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-02-25T17:17:42.749Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/michael--artist [none]
+[debug] [2023-02-25T17:17:43.065Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/michael--artist 200
+[debug] [2023-02-25T17:17:43.065Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/michael--artist {"projectId":"michael--artist","projectNumber":"690442290094","displayName":"Michael","name":"projects/michael--artist","resources":{"hostingSite":"michael--artist","realtimeDatabaseInstance":"michael--artist-default-rtdb"},"state":"ACTIVE","etag":"1_287b5164-1cfc-4b77-bb2d-904943edd2d4"}
+[debug] [2023-02-25T17:17:43.066Z] >>> [apiv2][query] GET https://firebaseremoteconfig.googleapis.com/v1/projects/690442290094/remoteConfig 
+[debug] [2023-02-25T17:17:43.416Z] <<< [apiv2][status] GET https://firebaseremoteconfig.googleapis.com/v1/projects/690442290094/remoteConfig 200
+[debug] [2023-02-25T17:17:43.416Z] <<< [apiv2][body] GET https://firebaseremoteconfig.googleapis.com/v1/projects/690442290094/remoteConfig {"version":{"versionNumber":"6","updateTime":"2023-02-25T17:02:00.944054Z","updateUser":{"email":"alexandros.ntrikos@ohg-monheim.eu"},"updateOrigin":"REST_API","updateType":"INCREMENTAL_UPDATE"}}
+[info] i  hosting[michael--artist]: beginning deploy... 
+[info] i  hosting[michael--artist]: found 7 files in dist 
+[debug] [2023-02-25T17:17:43.428Z] [hosting] uploading with 200 concurrency
+[debug] [2023-02-25T17:17:43.556Z] [hosting] hash cache [ZGlzdA] stored for 7 files
+[debug] [2023-02-25T17:17:43.556Z] [hosting][hash queue][FINAL] {"max":123,"min":6,"avg":23.571428571428573,"active":0,"complete":7,"success":7,"errored":0,"retried":0,"total":7,"elapsed":126}
+[debug] [2023-02-25T17:17:43.557Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/690442290094/sites/michael--artist/versions/335984e9d5c51e9c:populateFiles [none]
+[debug] [2023-02-25T17:17:43.557Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/690442290094/sites/michael--artist/versions/335984e9d5c51e9c:populateFiles {"files":{"/favicon.ico":"d5451f0f0f0bcbcd433bbdf4f6e7e5d89d8ecce2650649e969ccb5e5cd499ab2","/index.html":"34a4152e00760d4f9d820a2b6c4004562eccd4b4404afb3d8c3cbeb859937f6c","/css/app.b2d625b8.css":"c1bbe3227fba7e2e565379d8e80d3ae185eb05d70536728e3a5d559feb1aff89","/js/app.260bb65e.js":"367f98b7612b5dad8d93713e4ace63284cbfca987e8a9c8925ab525d604de40c","/js/app.260bb65e.js.map":"089446c82feda92dd63d2cae5b4edcd2ed32171a739d2fb626db4b4dec6fc97d","/js/chunk-vendors.26a8b62c.js":"f5fd234167f2619e76e6d110f72891dbf43faa140798b16ba91c77a6a9bd34db","/js/chunk-vendors.26a8b62c.js.map":"76e0e9917245b8c7c80f9bcd7a3620a4a53fbb3ce5293ba04f6415962a048835"}}
+[debug] [2023-02-25T17:17:44.073Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/690442290094/sites/michael--artist/versions/335984e9d5c51e9c:populateFiles 200
+[debug] [2023-02-25T17:17:44.074Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/690442290094/sites/michael--artist/versions/335984e9d5c51e9c:populateFiles {"uploadRequiredHashes":["c1bbe3227fba7e2e565379d8e80d3ae185eb05d70536728e3a5d559feb1aff89","367f98b7612b5dad8d93713e4ace63284cbfca987e8a9c8925ab525d604de40c","089446c82feda92dd63d2cae5b4edcd2ed32171a739d2fb626db4b4dec6fc97d","f5fd234167f2619e76e6d110f72891dbf43faa140798b16ba91c77a6a9bd34db","76e0e9917245b8c7c80f9bcd7a3620a4a53fbb3ce5293ba04f6415962a048835","34a4152e00760d4f9d820a2b6c4004562eccd4b4404afb3d8c3cbeb859937f6c"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/michael--artist/versions/335984e9d5c51e9c/files"}
+[debug] [2023-02-25T17:17:44.075Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/michael--artist/versions/335984e9d5c51e9c/files/c1bbe3227fba7e2e565379d8e80d3ae185eb05d70536728e3a5d559feb1aff89 [none]
+[debug] [2023-02-25T17:17:44.075Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/michael--artist/versions/335984e9d5c51e9c/files/c1bbe3227fba7e2e565379d8e80d3ae185eb05d70536728e3a5d559feb1aff89 [stream]
+[debug] [2023-02-25T17:17:44.076Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/michael--artist/versions/335984e9d5c51e9c/files/367f98b7612b5dad8d93713e4ace63284cbfca987e8a9c8925ab525d604de40c [none]
+[debug] [2023-02-25T17:17:44.076Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/michael--artist/versions/335984e9d5c51e9c/files/367f98b7612b5dad8d93713e4ace63284cbfca987e8a9c8925ab525d604de40c [stream]
+[debug] [2023-02-25T17:17:44.077Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/michael--artist/versions/335984e9d5c51e9c/files/089446c82feda92dd63d2cae5b4edcd2ed32171a739d2fb626db4b4dec6fc97d [none]
+[debug] [2023-02-25T17:17:44.077Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/michael--artist/versions/335984e9d5c51e9c/files/089446c82feda92dd63d2cae5b4edcd2ed32171a739d2fb626db4b4dec6fc97d [stream]
+[debug] [2023-02-25T17:17:44.079Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/michael--artist/versions/335984e9d5c51e9c/files/f5fd234167f2619e76e6d110f72891dbf43faa140798b16ba91c77a6a9bd34db [none]
+[debug] [2023-02-25T17:17:44.079Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/michael--artist/versions/335984e9d5c51e9c/files/f5fd234167f2619e76e6d110f72891dbf43faa140798b16ba91c77a6a9bd34db [stream]
+[debug] [2023-02-25T17:17:44.079Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/michael--artist/versions/335984e9d5c51e9c/files/76e0e9917245b8c7c80f9bcd7a3620a4a53fbb3ce5293ba04f6415962a048835 [none]
+[debug] [2023-02-25T17:17:44.079Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/michael--artist/versions/335984e9d5c51e9c/files/76e0e9917245b8c7c80f9bcd7a3620a4a53fbb3ce5293ba04f6415962a048835 [stream]
+[debug] [2023-02-25T17:17:44.080Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/michael--artist/versions/335984e9d5c51e9c/files/34a4152e00760d4f9d820a2b6c4004562eccd4b4404afb3d8c3cbeb859937f6c [none]
+[debug] [2023-02-25T17:17:44.080Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/michael--artist/versions/335984e9d5c51e9c/files/34a4152e00760d4f9d820a2b6c4004562eccd4b4404afb3d8c3cbeb859937f6c [stream]
+[debug] [2023-02-25T17:17:44.081Z] [hosting][populate queue][FINAL] {"max":520,"min":520,"avg":520,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":526}
+[debug] [2023-02-25T17:17:44.081Z] [hosting] uploads queued: 6
