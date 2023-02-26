@@ -5,7 +5,6 @@
 </template>
 <!--
   um changes hochzuladen musst du das hochladen:
-
   crt + s auch speichern genannt
   cd michael
   npm run build
@@ -27,12 +26,5 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
