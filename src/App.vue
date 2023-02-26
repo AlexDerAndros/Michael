@@ -1,6 +1,6 @@
 <template>
 <div class="main">
-  Hallo typ ther fggeh
+  
 </div>
 </template>
 <!--
