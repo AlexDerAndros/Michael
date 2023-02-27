@@ -10,10 +10,14 @@
         </div>
       </div>
       <div class="title">
-         Michael Ntrikos
+        <a href="https://michael-ntrikos.art/michael">
+          Michael Ntrikos
+        </a>
       </div>
       <div class="home">
-        Home
+        <a href="https://michael-ntrikos.art/">
+          Home
+        </a>
       </div>
       <div class="links">
         <img height="40px" src="https://promusicianhubcombd809.zapwp.com/q:i/r:0/wp:1/w:768/u:https://promusicianhub.com/wp-content/uploads/2020/04/get-your-music-on-tik-tok-768x432.jpg" alt="">
@@ -113,6 +117,13 @@ export default {
 </script>
 
 <style>
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 .links > img {
   margin: 5px 10px;
 }
@@ -130,6 +141,7 @@ body {
   position: sticky;
   display: flex;
   width: 100vw;
+  font-weight: bolder;
   height: 50px;
   background-color: black;
   margin: -200px 0px;
@@ -203,28 +215,30 @@ background: linear-gradient(to right, #2ce6bb 19%, #410F73 73%, #600b58 100%);
 }
 .sehe {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
   flex-direction: column;
   margin: -50px 0px;
 }
 .carossel {
-  height: 300px;
-  width: 250px;
+  height: 390px;
+  width: 290px;
   border-bottom-right-radius: 17px;
   border-top-left-radius: 17px;
   border: 3px solid black;
   margin: 50px 0px;
   backdrop-filter: blur(10px);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
-a {
+.alle > a {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
   ;
   text-decoration: none;
   color: #27CFA2;
+  margin: 0px 0px;
 }
 .fotos > img {
-  height: 300px;
+  height: 310px;
   margin: 0px 25px;
   scroll-snap-align: center;
 }
@@ -240,7 +254,7 @@ a {
   bottom: 0;
   height: 55px;
   width: 100vw;
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(10px);
   position: fixed;
 }
 .home-icon {
@@ -251,7 +265,11 @@ a {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: bold;
   height: 100px;
-  color: #808080;
+  background: #1DCF8E;
+background: linear-gradient(to right, #1DCF8E 4%, #6421FF 50%, #B51DB5 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
   width: 86vw;
 }
 .caro-ti {
@@ -266,7 +284,7 @@ a {
   width: 40px;
   height: 4px;
   border-radius: 60px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 .line2 {
   content: "";
